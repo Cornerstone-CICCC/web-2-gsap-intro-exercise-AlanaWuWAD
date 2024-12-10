@@ -1,1 +1,15 @@
-// PUT YOUR CODE HERE
+const square = gsap.timeline({repeat:-1})
+
+square
+.from('.red',{left:'-100vw',top:'-100vh',duration:1})
+.from('.green',{right:'-100vw',top:'-100vh',duration:1})
+.from('.blue',{right:'-100vw',bottom:'-100vh',duration:1})
+.from('.yellow',{left:'-100vw',bottom:'-100vh',duration:1})
+.to('.red',{left:'100vw',x:'-100%',borderRadius:'50%',backgroundColor:'green',duration:1})
+.to('.green',{top:'100vh',y:'-100%',borderRadius:'50%',backgroundColor:'blue',duration:1},'<')
+.to('.blue',{left:0,borderRadius:'50%',backgroundColor:'yellow',duration:1},'<')
+.to('.yellow',{top:0,borderRadius:'50%',backgroundColor:'red',duration:1},'<')
+.to('.yellow',{x:'-100%',duration:1})
+.to('.red',{x:'100%',duration:1},'<')
+.to('.green',{x:'100%',duration:1},'<')
+.to('.blue',{x:'-100%',duration:1},'<')
